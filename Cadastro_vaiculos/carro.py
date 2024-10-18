@@ -19,5 +19,4 @@ class Carro(Veiculo):
     def calcular_ipva(self):
         return self._valor_mercado * 0.04
 
-
 print(f"IPVA do carro: R${Carro.calcular_ipva():.2f}")
