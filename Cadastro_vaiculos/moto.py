@@ -1,13 +1,12 @@
+from veiculo import Veiculo
+
 class Moto(Veiculo):
-    def __init__(self, marca, modelo, ano, valor_mercado, cilindradas):
-        super().__init__(marca, modelo, ano, valor_mercado)
-        self.cilindradas = cilindradas
+    def __init__(self, marca, modelo, ano, km_rodados, cilindradas):
+        super().__init__(marca, modelo, ano, km_rodados)
+        self._cilindradas = cilindradas
 
-    def cilindradas(self):
-        return self.cilindradas
+    def calcular_ipva(self, valor_mercado):
+        return valor_mercado * 0.02
 
-    def cilindradas(self, valor):
-        self.cilindradas = valor
-
-    def calcular_ipva(self):
-        return self.valor_mercado * 0.02
+    def get_cilindradas(self):
+        return self._cilindradas
